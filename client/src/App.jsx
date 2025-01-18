@@ -1,19 +1,54 @@
 import './App.css'
-import Navbar from './components/Navbar'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import MainLayout from './layouts/MainLayout';
+import HomePage from './routes/HomePage';
+import PostListPage from './routes/PostListPage';
+import SinglePostPage from './routes/SinglePostPage';
+import Write from './routes/Write';
+import LoginPage from './routes/LoginPage';
+import RegisterPage from './routes/RegisterPage';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MainLayout/>,
+      children : [
+        {
+          path: "/",
+          element: <HomePage/>,
+        },
+        {
+          path: "posts",
+          element: <PostListPage/>,
+        },
+        {
+          path: ":slug",
+          element: <SinglePostPage/>,
+        },
+        {
+          path: "write",
+          element: <Write/>,
+        },
+        {
+          path: "login",
+          element: <LoginPage/>,
+        },
+        {
+          path: "register",
+          element: <RegisterPage/>,
+        },
+      ]
+    },
+   
+  ]);
   
   return (
     <>
-    <div className='px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64'>
-     {/* Navbar  */}
-     {/* Breadcrumb  */}
-     {/* Introduction  */}
-     {/* Featured post  */}
-     {/* Post list  */}
-    <Navbar/>
-    </div>
-     
+    <RouterProvider router={router} />     
     </>
   )
 }
