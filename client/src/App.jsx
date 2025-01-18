@@ -1,10 +1,19 @@
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
   
   return (
     <>
-     <h1 className='text-8xl'>Hello world!</h1>
+    <div className='px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64'>
+     {/* Navbar  */}
+     {/* Breadcrumb  */}
+     {/* Introduction  */}
+     {/* Featured post  */}
+     {/* Post list  */}
+    <Navbar/>
+    </div>
+     
     </>
   )
 }
