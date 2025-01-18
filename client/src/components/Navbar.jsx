@@ -1,5 +1,13 @@
+import { useState } from "react"
 
 const Navbar = () => {
+    const [open , setOpen] = useState(false);
+    const showMenu = ()=>{
+        setOpen(true);
+    }
+    const closeMenu =() =>{
+     setOpen(false)
+    }
   return (
    <>
    <header className="bg-white">
@@ -11,7 +19,7 @@ const Navbar = () => {
       </a>
     </div>
     <div className="flex lg:hidden">
-      <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+     <button onClick={showMenu} type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
         <span className="sr-only">Open main menu</span>
         <svg className="size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -34,7 +42,7 @@ const Navbar = () => {
     </div>
   </nav>
   
-  <div className="lg:hidden" role="dialog" aria-modal="true">
+{ open ?  <div className="lg:hidden" role="dialog" aria-modal="true">
     <div className="fixed inset-0 z-10"></div>
     <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
       <div className="flex items-center justify-between">
@@ -42,8 +50,8 @@ const Navbar = () => {
           <span className="sr-only">Your Company</span>
           <img className="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt=""/>
         </a>
-        <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700">
-          <span className="sr-only">Close menu</span>
+        <button onClick={closeMenu} type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700">
+          <span  className="sr-only">Close menu</span>
           <svg className="size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
@@ -72,7 +80,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  </div>
+  </div> : <> </> }
 </header>
 
    </>
