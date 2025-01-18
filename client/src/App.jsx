@@ -4,12 +4,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import MainLayout from './layouts/MainLayout';
-import HomePage from './routes/HomePage';
 import PostListPage from './routes/PostListPage';
 import SinglePostPage from './routes/SinglePostPage';
 import Write from './routes/Write';
 import LoginPage from './routes/LoginPage';
 import RegisterPage from './routes/RegisterPage';
+import HomePage from './routes/Homepage';
 
 function App() {
   const router = createBrowserRouter([
