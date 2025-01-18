@@ -33,9 +33,10 @@ const Navbar = () => {
         </button>        
       </div>
 
-      <a href="#" className="text-sm/6 font-semibold text-gray-900">Features</a>
-      <a href="#" className="text-sm/6 font-semibold text-gray-900">Marketplace</a>
-      <a href="#" className="text-sm/6 font-semibold text-gray-900">Company</a>
+      <a href="#" className="text-sm/6 font-semibold text-gray-900">Home</a>
+      <a href="#" className="text-sm/6 font-semibold text-gray-900">Trending</a>
+      <a href="#" className="text-sm/6 font-semibold text-gray-900">Most Popular</a>
+      <a href="#" className="text-sm/6 font-semibold text-gray-900">About</a>
     </div>
     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
       <a href="#" className="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
@@ -70,9 +71,10 @@ const Navbar = () => {
               </button>
              
             </div>
-            <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-            <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-            <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
+            <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
+            <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Trending</a>
+            <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Most Popular</a>
+            <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About</a>
           </div>
           <div className="py-6">
             <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
