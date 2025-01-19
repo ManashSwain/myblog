@@ -181,6 +181,7 @@ const HomePage = () => {
   </div>
 </section>
       {/* Post list  */}
+      <h1 className="text-center text-2xl text-gray-700 font-semibold">Recent Posts</h1>
     </>
   );
 };
