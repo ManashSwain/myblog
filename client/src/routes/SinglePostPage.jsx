@@ -37,6 +37,12 @@ const SinglePostPage = () => {
         <Link> <p className="text-blue-700 mt-2">John Doe</p></Link>
        </div>
        <p className="mt-4 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, recusandae.</p>
+       {/* social links  */}
+       <div className="flex flex-row gap-4 mt-4">
+       <Image src={"profile.jpg"} w={32} h={32} className={"rounded-full cursor-pointer"}/>
+       <Image src={"profile.jpg"} w={32} h={32} className={"rounded-full cursor-pointer"}/>
+       </div>
+       <h2 className="mt-4">Actions</h2>
       </div>
     </div>
    </div>
