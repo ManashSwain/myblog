@@ -28,11 +28,35 @@ const SinglePostPage = () => {
       </div>
     </div>
     {/* content */}
-    <div className="flex flex-col md:flex-row">
-      <div className="md:w-3/4">fdg</div>
+    <div className="flex flex-col md:flex-row gap-16">
+      <div className="md:w-3/4 flex flex-col">
+       {/* Dummy content  */}
+
+       <p className="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis atque nemo veniam animi! Deserunt ullam possimus dignissimos assumenda, laudantium labore hic excepturi adipisci quo fugit eaque consectetur sequi, veniam ex temporibus totam commodi. Illo consequatur qui ad ab nam sunt beatae fugiat, modi et cumque exercitationem repellat ratione, atque, non magnam laudantium velit? Similique quibusdam fuga ea dolorum magni officia voluptate quam maxime? Sapiente tempora provident ipsam culpa maiores neque hic nihil libero? Velit facilis adipisci enim dolorem consequatur ad, aspernatur porro modi unde delectus, corporis neque iure commodi. Dolore libero illum debitis? Saepe eum explicabo incidunt iste temporibus.</p>
+
+       <p className="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis atque nemo veniam animi! Deserunt ullam possimus dignissimos assumenda, laudantium labore hic excepturi adipisci quo fugit eaque consectetur sequi, veniam ex temporibus totam commodi. Illo consequatur qui ad ab nam sunt beatae fugiat, modi et cumque exercitationem repellat ratione, atque, non magnam laudantium velit? Similique quibusdam fuga ea dolorum magni officia voluptate quam maxime? Sapiente tempora provident ipsam culpa maiores neque hic nihil libero? Velit facilis adipisci enim dolorem consequatur ad, aspernatur porro modi unde delectus, corporis neque iure commodi. Dolore libero illum debitis? Saepe eum explicabo incidunt iste temporibus.</p>
+
+       <p className="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis atque nemo veniam animi! Deserunt ullam possimus dignissimos assumenda, laudantium labore hic excepturi adipisci quo fugit eaque consectetur sequi, veniam ex temporibus totam commodi. Illo consequatur qui ad ab nam sunt beatae fugiat, modi et cumque exercitationem repellat ratione, atque, non magnam laudantium velit? Similique quibusdam fuga ea dolorum magni officia voluptate quam maxime? Sapiente tempora provident ipsam culpa maiores neque hic nihil libero? Velit facilis adipisci enim dolorem consequatur ad, aspernatur porro modi unde delectus, corporis neque iure commodi. Dolore libero illum debitis? Saepe eum explicabo incidunt iste temporibus.</p>
+
+       <p className="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis atque nemo veniam animi! Deserunt ullam possimus dignissimos assumenda, laudantium labore hic excepturi adipisci quo fugit eaque consectetur sequi, veniam ex temporibus totam commodi. Illo consequatur qui ad ab nam sunt beatae fugiat, modi et cumque exercitationem repellat ratione, atque, non magnam laudantium velit? Similique quibusdam fuga ea dolorum magni officia voluptate quam maxime? Sapiente tempora provident ipsam culpa maiores neque hic nihil libero? Velit facilis adipisci enim dolorem consequatur ad, aspernatur porro modi unde delectus, corporis neque iure commodi. Dolore libero illum debitis? Saepe eum explicabo incidunt iste temporibus.</p>
+
+       <p className="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis atque nemo veniam animi! Deserunt ullam possimus dignissimos assumenda, laudantium labore hic excepturi adipisci quo fugit eaque consectetur sequi, veniam ex temporibus totam commodi. Illo consequatur qui ad ab nam sunt beatae fugiat, modi et cumque exercitationem repellat ratione, atque, non magnam laudantium velit? Similique quibusdam fuga ea dolorum magni officia voluptate quam maxime? Sapiente tempora provident ipsam culpa maiores neque hic nihil libero? Velit facilis adipisci enim dolorem consequatur ad, aspernatur porro modi unde delectus, corporis neque iure commodi. Dolore libero illum debitis? Saepe eum explicabo incidunt iste temporibus.</p>
+
+       <p className="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis atque nemo veniam animi! Deserunt ullam possimus dignissimos assumenda, laudantium labore hic excepturi adipisci quo fugit eaque consectetur sequi, veniam ex temporibus totam commodi. Illo consequatur qui ad ab nam sunt beatae fugiat, modi et cumque exercitationem repellat ratione, atque, non magnam laudantium velit? Similique quibusdam fuga ea dolorum magni officia voluptate quam maxime? Sapiente tempora provident ipsam culpa maiores neque hic nihil libero? Velit facilis adipisci enim dolorem consequatur ad, aspernatur porro modi unde delectus, corporis neque iure commodi. Dolore libero illum debitis? Saepe eum explicabo incidunt iste temporibus.</p>
+
+       <p className="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis atque nemo veniam animi! Deserunt ullam possimus dignissimos assumenda, laudantium labore hic excepturi adipisci quo fugit eaque consectetur sequi, veniam ex temporibus totam commodi. Illo consequatur qui ad ab nam sunt beatae fugiat, modi et cumque exercitationem repellat ratione, atque, non magnam laudantium velit? Similique quibusdam fuga ea dolorum magni officia voluptate quam maxime? Sapiente tempora provident ipsam culpa maiores neque hic nihil libero? Velit facilis adipisci enim dolorem consequatur ad, aspernatur porro modi unde delectus, corporis neque iure commodi. Dolore libero illum debitis? Saepe eum explicabo incidunt iste temporibus.</p>
+
+       <p className="text-justify mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis atque nemo veniam animi! Deserunt ullam possimus dignissimos assumenda, laudantium labore hic excepturi adipisci quo fugit eaque consectetur sequi, veniam ex temporibus totam commodi. Illo consequatur qui ad ab nam sunt beatae fugiat, modi et cumque exercitationem repellat ratione, atque, non magnam laudantium velit? Similique quibusdam fuga ea dolorum magni officia voluptate quam maxime? Sapiente tempora provident ipsam culpa maiores neque hic nihil libero? Velit facilis adipisci enim dolorem consequatur ad, aspernatur porro modi unde delectus, corporis neque iure commodi. Dolore libero illum debitis? Saepe eum explicabo incidunt iste temporibus.</p>
+
+       
+       
+
+
+      
+      </div>
 
       {/* single post side menu  */}
-      <div className="md:w-1/4 flex flex-col text-sm">
+      <div className="md:w-1/4 flex flex-col text-sm sticky top-8 h-max">
      <h2 className="font-bold">Author</h2>
        <div className="mt-4 flex gap-8 align-center">
         <Image src={"profile.jpg"} w={48} h={48} className={"rounded-full cursor-pointer"}/>
