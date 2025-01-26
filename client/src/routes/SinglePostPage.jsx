@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import Image from "../components/Image"
+import Actions from "../components/Actions"
+import Search from "../components/Search"
 
 const SinglePostPage = () => {
   return (
@@ -31,7 +33,7 @@ const SinglePostPage = () => {
 
       {/* single post side menu  */}
       <div className="md:w-1/4 flex flex-col text-sm">
-     <h2 className="">Author</h2>
+     <h2 className="font-bold">Author</h2>
        <div className="mt-4 flex gap-8 align-center">
         <Image src={"profile.jpg"} w={48} h={48} className={"rounded-full cursor-pointer"}/>
         <Link> <p className="text-blue-700 mt-2">John Doe</p></Link>
@@ -42,7 +44,21 @@ const SinglePostPage = () => {
        <Image src={"profile.jpg"} w={32} h={32} className={"rounded-full cursor-pointer"}/>
        <Image src={"profile.jpg"} w={32} h={32} className={"rounded-full cursor-pointer"}/>
        </div>
-       <h2 className="mt-4">Actions</h2>
+       <h2 className="mt-8 font-bold">Actions</h2>
+       <Actions/>
+
+       {/* categories  */}
+       <h2 className="mt-8 font-bold">Categories</h2>
+        <div>
+          <Link><p className="underline mt-6">All</p></Link>
+          <Link><p className="underline mt-2">Web Design</p></Link>
+          <Link><p className="underline mt-2">Development</p></Link>
+          <Link><p className="underline mt-2">Databases</p></Link>
+          <Link><p className="underline mt-2">Search Engines</p></Link>
+          <Link><p className="underline mt-2">Marketing</p></Link>
+        </div>
+        <h2 className="mt-8 font-bold">Search</h2> 
+        <Search/>
       </div>
     </div>
    </div>
