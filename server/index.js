@@ -14,9 +14,9 @@ const port = 3000 ;
 app.use(express.json());
 
 // routes 
-app.use("/testuser",Userrouter );
-app.use("/testpost",Postrouter );
-app.use("/testcomment",Commentrouter );
+app.use("/user",Userrouter );
+app.use("/post",Postrouter );
+app.use("/comment",Commentrouter );
 
 // requests 
 app.get('/',(req,res)=>{
