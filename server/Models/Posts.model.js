@@ -25,6 +25,14 @@ const postSchema = mongoose.Schema({
         type : String,
         required : true 
     },
+    isFeatured : {
+        type : Boolean ,
+        default : false
+    },
+    visit : {
+        type : Number,
+        default : 0
+    }
 },{ timestamps : true});
 
 const Post = mongoose.models.Post || mongoose.model("Post" , postSchema);
