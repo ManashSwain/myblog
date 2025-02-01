@@ -13,6 +13,16 @@ const port = 3000 ;
 // middlewares 
 app.use(express.json());
 
+// error handling 
+
+app.use((error,req,res,next )=>{
+   res.status(error.status || 500);
+  res.json({
+    message : error.message || "something went wrong",
+    status : error.status ,
+  });
+})
+
 // routes 
 app.use("/user",Userrouter );
 app.use("/post",Postrouter );
