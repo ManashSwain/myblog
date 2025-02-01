@@ -1,3 +1,5 @@
+import User from "../Models/User.model.js";
+
 import { Webhook } from "svix";
  
  export const clerkWebhook = async (req,res)=>{
@@ -19,7 +21,15 @@ import { Webhook } from "svix";
         });
     }
 
-    // Do something with the message...
+    console.log(msg.data);
 
-    res.json({});
+    // if (evt.type === 'user.created') {
+
+    //     const newUser = new User({
+    //         clerkuserID : ev 
+    //     })
+
+    //     // console.log('userId:', evt.data.id)
+      
+    //   }
 }

@@ -11,6 +11,9 @@ dotenv.config();
 const app = express();
 const port = 3000 ;
 
+// webhook router (uses body parser rest routers uses json)
+app.use("/webhooks" ,Webhookrouter );
+
 // middlewares 
 app.use(express.json());
 
@@ -28,7 +31,7 @@ app.use((error,req,res,next )=>{
 app.use("/user",Userrouter );
 app.use("/post",Postrouter );
 app.use("/comment",Commentrouter );
-app.use("/webhooks" ,Webhookrouter );
+
 
 // requests 
 app.get('/',(req,res)=>{
