@@ -15,21 +15,16 @@ import { Webhook } from "svix";
     let msg;
     try {
         msg = wh.verify(payload, headers);
+        console.log("🔹 Raw Webhook Body:", payload);
+        console.log("🔹 Webhook Headers:", headers);
     } catch (err) {
+        console.error("❌ Webhook verification failed:", err);
         res.status(400).json({
             message : "Webhook veification failed !"
         });
     }
 
-    console.log(msg.data);
+console.log('Webhook payload:', msg.data);
 
-    // if (evt.type === 'user.created') {
-
-    //     const newUser = new User({
-    //         clerkuserID : ev 
-    //     })
-
-    //     // console.log('userId:', evt.data.id)
-      
-    //   }
+res.status(200).json({ message: "Webhook received successfully" });
 }

@@ -12,7 +12,7 @@ const app = express();
 const port = 3000 ;
 
 // webhook router (uses body parser rest routers uses json)
-app.use("/webhooks" ,Webhookrouter );
+app.use("/webhooks", express.raw({ type: "application/json" }) ,Webhookrouter );
 
 // middlewares 
 app.use(express.json());
