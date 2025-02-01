@@ -6,7 +6,7 @@ import { Webhook } from "svix";
     const WEBHOOKSECRET = process.env.CLERK_SECRET ;
 
     if(!WEBHOOKSECRET){
-        throw new Error("Webhook secret needed !");
+        return res.status(400).json({ message: "Webhook secret needed!" });
     }
     const payload = req.body;
     const headers = req.headers;
@@ -15,8 +15,6 @@ import { Webhook } from "svix";
     let msg;
     try {
         msg = wh.verify(payload, headers);
-        console.log("🔹 Raw Webhook Body:", payload);
-        console.log("🔹 Webhook Headers:", headers);
     } catch (err) {
         console.error("❌ Webhook verification failed:", err);
         res.status(400).json({
@@ -24,7 +22,8 @@ import { Webhook } from "svix";
         });
     }
 
-console.log('Webhook payload:', msg.data);
+console.log('Webhook payload:', msg);
 
 res.status(200).json({ message: "Webhook received successfully" });
 }
+
