@@ -2,6 +2,7 @@ import express from 'express';
 import Userrouter from './Routes/User.route.js';
 import Postrouter from './Routes/Posts.route.js';
 import Commentrouter from './Routes/Comments.route.js';
+import Webhookrouter from './Routes/Webhooks.route.js';
 import connectDB from './lib/connectDB.js';
 import dotenv from 'dotenv';
 
@@ -27,6 +28,7 @@ app.use((error,req,res,next )=>{
 app.use("/user",Userrouter );
 app.use("/post",Postrouter );
 app.use("/comment",Commentrouter );
+app.use("/webhooks" ,Webhookrouter );
 
 // requests 
 app.get('/',(req,res)=>{
