@@ -5,6 +5,9 @@ import Commentrouter from './Routes/Comments.route.js';
 import Webhookrouter from './Routes/Webhooks.route.js';
 import connectDB from './lib/connectDB.js';
 import dotenv from 'dotenv';
+import bodyParser from "body-parser";
+
+
 
 dotenv.config();
 
@@ -12,7 +15,7 @@ const app = express();
 const port = 3000 ;
 
 // webhook router (uses body parser rest routers uses json)
-app.use("/webhooks",w({ type: "application/json" }) ,Webhookrouter );
+app.use("/webhooks" ,Webhookrouter );
 
 // middlewares 
 app.use(express.json());

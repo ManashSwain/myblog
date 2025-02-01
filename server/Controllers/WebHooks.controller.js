@@ -6,24 +6,66 @@ import { Webhook } from "svix";
     const WEBHOOKSECRET = process.env.CLERK_SECRET ;
 
     if(!WEBHOOKSECRET){
-        return res.status(400).json({ message: "Webhook secret needed!" });
+        throw new Error("Webhook secret needed");
     }
     const payload = req.body;
     const headers = req.headers;
 
     const wh = new Webhook(WEBHOOKSECRET);
-    let msg;
+    let evt;
     try {
-        msg = wh.verify(payload, headers);
+        evt = wh.verify(payload, headers);
     } catch (err) {
-        console.error("❌ Webhook verification failed:", err);
         res.status(400).json({
             message : "Webhook veification failed !"
         });
     }
 
-console.log('Webhook payload:', msg);
+    console.log(evt.data);
+   
+    if (evt.type === 'user.created') {
 
-res.status(200).json({ message: "Webhook received successfully" });
+        const newUser = new User({
+            clerkuserID : evt.data.id,
+            username : evt.data.username || evt.data.email_addresses[0].email_address,
+            email : evt.data.email_addresses[0].email_address ,
+            img : evt.data.profile_image_url
+        })
+
+        await newUser.save();
+      }
+
+      if (evt.type === 'user.update') {
+
+        const newUser = new User({
+            clerkuserID : evt.data.id,
+            username : evt.data.username || evt.data.email_addresses[0].email_address,
+            email : evt.data.email_addresses[0].email_address ,
+            img : evt.data.profile_image_url
+        })
+
+        await newUser.save();
+      }
+
+      if (evt.type === 'user.delete') {
+
+        const newUser = new User({
+            clerkuserID : evt.data.id,
+            username : evt.data.username || evt.data.email_addresses[0].email_address,
+            email : evt.data.email_addresses[0].email_address ,
+            img : evt.data.profile_image_url
+        })
+
+        await newUser.save();
+      }
+
+      
+      return res.status(200).json({
+        message : "Webhook received"
+      })
+
 }
+
+
+
 
