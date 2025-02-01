@@ -5,7 +5,8 @@ import Commentrouter from './Routes/Comments.route.js';
 import Webhookrouter from './Routes/Webhooks.route.js';
 import connectDB from './lib/connectDB.js';
 import dotenv from 'dotenv';
-import bodyParser from "body-parser";
+import { clerkMiddleware , getAuth, requireAuth } from '@clerk/express'
+
 
 
 
@@ -13,6 +14,10 @@ dotenv.config();
 
 const app = express();
 const port = 3000 ;
+
+// clerk middleware for authorization 
+
+app.use(clerkMiddleware())
 
 // webhook router (uses body parser rest routers uses json)
 app.use("/webhooks" ,Webhookrouter );
@@ -29,6 +34,41 @@ app.use((error,req,res,next )=>{
     status : error.status ,
   });
 })
+
+// testing routes 
+
+// app.get("/test" ,(req,res)=>{
+//    res.status(200).send("It works");
+// })
+
+// for protected routes testing
+
+// app.get("/auth-state" , (req,res)=>{
+//    const authstate = req.auth ;
+//    res.json(authstate);
+// })
+
+// protected routes 
+
+// app.get("/protect" , (req,res)=>{
+//    const {userId} = req.auth ;
+//    if(!userId){
+//     return res.status(401).json({
+//       message : "not authenticated",
+//     })
+//    }
+//    res.status(200).json({
+//      message : "authenticated"
+//    })
+// })
+
+// protected route testing via auth state 
+
+// app.get('/protected', requireAuth(), async (req, res) => {
+//    return res.json({message : "protected route testing via require auth" })
+// })
+
+
 
 // routes 
 app.use("/user",Userrouter );
